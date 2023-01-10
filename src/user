@@ -1,0 +1,45 @@
+
+create table users (
+                      id SERIAL PRIMARY KEY ,
+                       login VARCHAR(50),
+                       salary INT,
+                       age INT,
+                       working_year DATE,
+                       description VARCHAR(50)
+);
+insert into users (login, salary, age, working_year, description) values ('ckeniwell0@chicagotribune.com', 7012, 51, '15/10/2022', 'enhance best-of-breed models');
+insert into users (login, salary, age, working_year, description) values ('mpicton1@ezinearticles.com', 9816, 30, '30/10/2022', 'brand seamless action-items');
+insert into users (login, salary, age, working_year, description) values ('wcharpling2@forbes.com', 3227, 35, '05/07/2022', 'incubate intuitive e-services');
+insert into users (login, salary, age, working_year, description) values ('nhartland3@miitbeian.gov.cn', 4621, 68, '05/06/2022', 'matrix value-added synergies');
+insert into users (login, salary, age, working_year, description) values ('dgardiner4@aboutads.info', 2202, 58, '05/07/2022', 'unleash cutting-edge schemas');
+insert into users (login, salary, age, working_year, description) values ('bkingshott5@umich.edu', 1720, 76, '06/09/2022', 'optimize intuitive methodologies');
+insert into users (login, salary, age, working_year, description) values ('psalmen6@cnn.com', 7846, 33, '28/05/2022', 'architect cross-platform e-services');
+insert into users (login, salary, age, working_year, description) values ('sbouttell7@shinystat.com', 5069, 38, '30/10/2022', 'incentivize visionary markets');
+insert into users (login, salary, age, working_year, description) values ('dschwandermann8@ovh.net', 5887, 65, '02/08/2022', 'maximize out-of-the-box e-services');
+insert into users (login, salary, age, working_year, description) values ('agreggersen9@desdev.cn', 6492, 60, '29/01/2022', 'optimize web-enabled action-items');
+insert into users (login, salary, age, working_year, description) values ('lcochrana@about.com', 4584, 44, '12/05/2022', 'iterate dynamic experiences');
+insert into users (login, salary, age, working_year, description) values ('adranfieldb@tuttocitta.it', 8595, 41, '02/01/2023', 'engineer strategic e-services');
+insert into users (login, salary, age, working_year, description) values ('mivanilovc@theglobeandmail.com', 8364, 50, '14/11/2022', 'facilitate extensible markets');
+insert into users (login, salary, age, working_year, description) values ('aploughwrightd@home.pl', 3863, 44, '29/11/2022', 'recontextualize e-business architectures');
+insert into users (login, salary, age, working_year, description) values ('rtolladye@nydailynews.com', 5198, 53, '06/09/2022', 'synergize visionary infomediaries');
+insert into users (login, salary, age, working_year, description) values ('tjensenf@addthis.com', 9529, 70, '03/02/2022', 'orchestrate web-enabled portals');
+insert into users (login, salary, age, working_year, description) values ('mhazleg@mozilla.org', 1067, 63, '23/07/2022', 'transition granular web-readiness');
+insert into users (login, salary, age, working_year, description) values ('tmacdonnellh@wisc.edu', 4186, 45, '12/05/2022', 'deliver sticky markets');
+insert into users (login, salary, age, working_year, description) values ('ghuddyi@fda.gov', 4156, 24, '01/07/2022', 'harness back-end metrics');
+insert into users (login, salary, age, working_year, description) values ('wkasej@eepurl.com', 3467, 35, '16/07/2022', 'envisioneer mission-critical initiatives');
+insert into users(login, salary, age, working_year, description) VALUES ('gmail.com',4070,18,'12-03-2022','bnwsjverkckw');
+insert into users(login, salary, age, working_year, description) VALUES ('facebook.com',3650,18,'08-04-2022','cdcerdfcds');
+insert into users(login, salary, age, working_year, description) VALUES ('google.com',3008,19,'01-09-2022','ceffecs');
+
+SELECT * FROM users;
+
+SELECT * FROM users WHERE id in (1,2,3,5,11);
+SELECT * FROM users WHERE login in ('google.com','facebook.com','gmail.com');
+SELECT * FROM users WHERE id in (1,2,3,7,9) and login in ('nhartland3@miitbeian.gov.cn','wcharpling2@forbes.com','bchs') and salary>3500;
+SELECT * FROM users WHERE id BETWEEN 3 and 10 and salary between 3000 and 5000;
+SELECT id as User_ID,login as User_login,salary as User_salary FROM users;
+ALTER TABLE users ADD COLUMN res INT;
+SELECT concat('3') as res FROM users;
+SELECT concat('Salary: ',salary, ' Age: ',age) as res FROM users;
+SELECT concat('Salary: ',salary, ' --- Age: ',age,'!!!') as res FROM users;
+SELECT concat(substring(login,5),'...') from users;
